@@ -1,5 +1,5 @@
 <div>
-    <h2>Количесвто кликов {{clicks}}</h2>
-    <app-child (onChanged)="onChanged($event)"></app-child>
+    <app-child [(userName)]="name"></app-child>
+    <h4>Вы ввели имя -- {{name}}</h4>
 </div>
 
