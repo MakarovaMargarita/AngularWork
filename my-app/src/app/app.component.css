@@ -1,3 +1,9 @@
-.active{
+.active {
     color:red;
+}
+.nav {
+    clear:both;
+}
+a {
+    float:left;
 }
