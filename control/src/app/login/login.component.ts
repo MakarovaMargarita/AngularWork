@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   login: string;
   password: string;
-  constructor() {
-  }
+  entered: boolean;
+  constructor() {}
 
   ngOnInit() {
-    this.login = "admin1"
-    this.password = "admin2"
+    this.login = "admin1";
+    this.password = "admin2";
+    this.entered = false;
   }
 
 
@@ -22,6 +23,21 @@ export class LoginComponent implements OnInit {
     //console.log(this.password);
     if (this.login == "admin" && this.password == "admin"){
       console.log('Все хорошо, вы вошли')
+      this.entered = true;
+    
+    } else {
+      const pass = localStorage.getItem('password');
+      const log = localStorage.getItem('login');
+
+      if (log === this.login && pass === this.password){
+        console.log('Все хорошо, вы вошли');
+        this.entered = true;
+
+      } else {
+      this.entered = false;
+      localStorage.setItem("login", this.login);
+      localStorage.setItem('password', this.password);
     }
+
   }
-}
+}}

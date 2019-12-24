@@ -10,4 +10,11 @@
             name= "password"><br>
         <input type = "submit" value = "Войти">
     </form>
+    <div>
+        <form (ngSubmit)="MakeLogin()">
+        </form>
+        <div *ngIf="entered">
+            <h1>Вы вошли</h1>
+        </div>
+    </div>
 </div>
