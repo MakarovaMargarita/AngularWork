@@ -1,20 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './first-component/first-component.component';
-import { SecondComponentComponent } from './second-component/second-component.component';
-import { ChildComponentComponent } from './child-component/child-component.component';
-import { from } from 'rxjs';
+import { MainComponent } from './main/main.component';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import{ FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
-    SecondComponentComponent,
-    ChildComponentComponent
+    MainComponent,
+    AboutComponent,
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

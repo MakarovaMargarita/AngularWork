@@ -1,0 +1,13 @@
+<div>
+    <form (ngSubmit) = "MakeLogin()">
+        <input type = "text" 
+            placeholder = "Ваш логин в системе" 
+            [(ngModel)] = "login"
+            name = "login"><br>
+        <input type = "password" 
+            placeholder = "Super hard password" 
+            [(ngModel)] = "password"
+            name= "password"><br>
+        <input type = "submit" value = "Войти">
+    </form>
+</div>
